@@ -12,9 +12,7 @@
               :key="idx"
               class="cursor-pointer duration-300 hover:text-orange-500"
             >
-              <NuxtLink :to="`/${menu}`">
-                {{ menu }}
-              </NuxtLink>
+              {{ menu }}
             </li>
           </ul>
         </nav>
@@ -26,7 +24,7 @@
         </button>
         <Teleport to="body">
           <Transition name="slide">
-            <div v-if="openMenu">
+            <div v-show="openMenu">
               <div
                 class="bg fixed top-0 z-10 h-full w-full bg-slate-950 bg-opacity-50"
               ></div>
@@ -50,9 +48,7 @@
                         :key="idx"
                         class="cursor-pointer duration-300 hover:text-orange-500"
                       >
-                        <NuxtLink :to="`/${menu}`">
-                          {{ menu }}
-                        </NuxtLink>
+                        {{ menu }}
                       </li>
                     </TransitionGroup>
                   </ul>
@@ -67,17 +63,30 @@
     <main class="container py-3 lg:max-w-7xl">
       <div class="grid grid-cols-1 gap-y-14 lg:grid-cols-3 lg:gap-x-8">
         <div class="col-span-2 space-y-4">
-          <picture>
-            <source
-              srcset="/images/image-web-3-desktop.jpg"
-              media="(min-width: 1024px)"
+          <div class="relative">
+            <nuxt-img
+              loading="lazy"
+              src="/images/image-web-3-mobile.jpg"
+              alt="hero image"
+              class="w-full lg:hidden"
+              @load="loading = false"
             />
-            <img src="/images/image-web-3-mobile.jpg" alt="hero image" />
-          </picture>
+            <nuxt-img
+              loading="lazy"
+              src="/images/image-web-3-desktop.jpg"
+              alt="hero image"
+              class="hidden w-full lg:block"
+              @load="loading = false"
+            />
+            <div
+              v-if="loading"
+              class="absolute top-0 h-full w-full animate-pulse bg-zinc-200"
+            ></div>
+          </div>
           <div
             class="flex flex-col justify-between gap-4 lg:flex-row lg:gap-10"
           >
-            <h1 class="w-1/2 text-3xl font-bold lg:w-[42.5%] lg:text-5xl">
+            <h1 class="w-1/2 text-3xl font-bold lg:w-[40%] lg:text-5xl">
               The Bright Future of Web 3.0?
             </h1>
             <div class="flex-1 space-y-4 lg:space-y-6">
@@ -178,7 +187,7 @@
 
 <script setup lang="ts">
 const menus = ['Home', 'New', 'Popular', 'Trending', 'Categories']
-
+const loading = ref(true)
 const openMenu = ref(false)
 
 watch(openMenu, () => {
