@@ -1,17 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
+  devtools: { enabled: true },
   tailwindcss: {
     config: {
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '1.25rem',
-          md: '1.5rem',
-          lg: '2rem'
+      theme: {
+        container: {
+          center: true,
+          padding: {
+            DEFAULT: '1.5rem',
+            md: '2rem',
+            lg: '2.5rem'
+          }
         }
       }
     }
-  },
-  devtools: { enabled: true }
+  }
 })
