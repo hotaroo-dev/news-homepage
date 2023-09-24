@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="sticky top-0 bg-white py-3">
+    <header class="sticky top-0 z-10 bg-white py-3">
       <div class="container flex items-center lg:max-w-7xl">
         <div class="grid h-10 w-10 place-items-center">
           <img src="/images/logo.svg" alt="news logo" />
@@ -26,10 +26,10 @@
           <Transition name="slide">
             <div v-show="openMenu">
               <div
-                class="bg fixed top-0 z-10 h-full w-full bg-slate-950 bg-opacity-50"
+                class="bg fixed top-0 z-50 h-full w-full bg-slate-950 bg-opacity-50"
               ></div>
               <div
-                class="inner fixed right-0 top-0 z-10 min-h-screen w-4/6 bg-white"
+                class="inner fixed right-0 top-0 z-50 min-h-screen w-4/6 bg-white"
               >
                 <button
                   class="absolute right-6 top-4 grid h-10 w-10 place-items-center"
