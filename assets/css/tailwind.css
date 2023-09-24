@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 body {
+  min-height: 100vh;
   font-family: 'Inter Variable', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @apply min-h-screen;
 }

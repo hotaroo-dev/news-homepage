@@ -7,19 +7,19 @@
             loading="lazy"
             src="/images/image-web-3-mobile.jpg"
             alt="hero image"
-            class="w-full lg:hidden"
+            class="min-h-min w-full lg:hidden"
             @load="loading = false"
           />
           <nuxt-img
             loading="lazy"
             src="/images/image-web-3-desktop.jpg"
             alt="hero image"
-            class="hidden w-full lg:block"
+            class="hidden min-h-min w-full lg:block"
             @load="loading = false"
           />
           <div
             v-if="loading"
-            class="absolute top-0 h-full w-full animate-pulse bg-zinc-200"
+            class="absolute inset-0 animate-pulse bg-zinc-200"
           ></div>
         </div>
         <div class="flex flex-col justify-between gap-4 lg:flex-row lg:gap-10">
