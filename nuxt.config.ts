@@ -4,7 +4,9 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image'],
-  devtools: { enabled: true },
+  image: {
+    dir: 'assets/images'
+  },
   tailwindcss: {
     config: {
       theme: {
@@ -18,5 +20,6 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+  devtools: { enabled: true }
 })
