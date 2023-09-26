@@ -170,7 +170,8 @@ useHead({
   transition-delay: 400ms;
 }
 
-.page-enter-from .bar .page-leave-to .bar {
+.page-enter-from .bar,
+.page-leave-to .bar {
   transform: translateX(0%);
 }
 .page-enter-to .bar {
