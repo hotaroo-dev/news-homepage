@@ -4,7 +4,7 @@
       <div class="container flex items-center lg:max-w-7xl">
         <div class="grid h-10 w-10 place-items-center">
           <NuxtLink to="/">
-            <img :src="logoImage" alt="news logo" />
+            <nuxt-img src="/images/logo.svg" alt="news logo" />
           </NuxtLink>
         </div>
         <nav class="flex-1">
@@ -24,7 +24,7 @@
           class="h-10 w-10 place-items-center lg:hidden"
           @click="openMenu = true"
         >
-          <img :src="iconMenu" alt="menu icon" />
+          <img src="/images/icon-menu.svg" alt="menu icon" />
         </button>
         <Teleport to="body">
           <Transition name="slide">
@@ -39,7 +39,10 @@
                   class="absolute right-6 top-4 grid h-10 w-10 place-items-center"
                   @click="openMenu = false"
                 >
-                  <img :src="iconMenuClose" alt="menu-close icon" />
+                  <img
+                    src="/images/icon-menu-close.svg"
+                    alt="menu-close icon"
+                  />
                 </button>
                 <nav class="pl-6 pt-40">
                   <ul class="space-y-6 text-xl">
@@ -73,9 +76,6 @@
 
 <script setup lang="ts">
 import '@fontsource-variable/inter'
-import logoImage from '~/assets/images/logo.svg'
-import iconMenu from '~/assets/images/icon-menu.svg'
-import iconMenuClose from '~/assets/images/icon-menu-close.svg'
 
 const router = useRouter()
 const menus = ['Home', 'New', 'Popular', 'Trending', 'Categories']

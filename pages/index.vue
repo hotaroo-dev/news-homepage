@@ -5,14 +5,14 @@
         <div class="relative">
           <nuxt-img
             loading="lazy"
-            src="/image-web-3-mobile.jpg"
+            src="/images/image-web-3-mobile.jpg"
             alt="hero image"
             class="min-h-min w-full lg:hidden"
             @load="loading = false"
           />
           <nuxt-img
             loading="lazy"
-            src="/image-web-3-desktop.jpg"
+            src="/images/image-web-3-desktop.jpg"
             alt="hero image"
             class="hidden min-h-min w-full lg:block"
             @load="loading = false"
@@ -82,7 +82,7 @@
 
     <div class="grid grid-cols-1 gap-10 py-14 lg:grid-cols-3">
       <div class="grid grid-cols-3 gap-6">
-        <nuxt-img src="/image-retro-pcs.jpg" alt="retro pcs" />
+        <nuxt-img src="/images/image-retro-pcs.jpg" alt="retro pcs" />
         <div class="col-span-2 space-y-2">
           <h2 class="text-3xl font-bold text-gray-300">01</h2>
           <h3 class="text-lg font-bold duration-300 hover:text-orange-600">
@@ -94,7 +94,7 @@
         </div>
       </div>
       <div class="grid grid-cols-3 gap-6">
-        <nuxt-img src="/image-top-laptops.jpg" alt="top laptops" />
+        <nuxt-img src="/images/image-top-laptops.jpg" alt="top laptops" />
         <div class="col-span-2 space-y-2">
           <h2 class="text-3xl font-bold text-gray-300">02</h2>
           <h3 class="text-lg font-bold duration-300 hover:text-orange-600">
@@ -106,7 +106,7 @@
         </div>
       </div>
       <div class="grid grid-cols-3 gap-6">
-        <nuxt-img src="/image-gaming-growth.jpg" alt="game controller" />
+        <nuxt-img src="/images/image-gaming-growth.jpg" alt="game controller" />
         <div class="col-span-2 space-y-2">
           <h2 class="text-3xl font-bold text-gray-300">03</h2>
           <h3 class="text-lg font-bold duration-300 hover:text-orange-600">
